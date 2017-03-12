@@ -60,6 +60,9 @@
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
+							"mkdir /etc/chef/\n",
+							"echo 'environment=qa' > /etc/chef/envdata\n",
+							"echo 'component=UI' >> /etc/chef/envdata\n",
                                                         "mkdir /opt/chef1/\n",
 							"echo test > /opt/chef1/testfile\n", {
 							"Ref": "WaitHandle"
